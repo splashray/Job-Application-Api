@@ -28,7 +28,10 @@ mongoose.connect(process.env.MONGODB_URL, {
 app.use(cors())
 app.use(cookieParser())
 app.use(express.json())
-app.use(express.static('./public'))
+
+app.get('/', (req,res) =>{
+  res.send('Welcome')
+})
 
 //routes
 app.use('/api/users',usersRoute)
