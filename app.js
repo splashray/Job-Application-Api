@@ -39,6 +39,9 @@ app.use('/api/auth', authRoute)
 app.use('/api/jobs', jobsRoute)
 
 
+app.get('/',(req,res)=>{
+    res.send("Welcome to Job Api")
+})
 
 app.use((err, req, res, next)=>{
   const errorStatus = err.status || 500 
