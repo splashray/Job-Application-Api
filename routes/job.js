@@ -7,7 +7,7 @@ const router = express.Router()
 router.post("/", verifyToken, verifyAdmin, createJob)
 
 //get  job information
-router.get("/", verifyToken, getAllJob)
+router.get("/", getAllJob)
 
 //get particular job information
 router.get("/:id", verifyToken, getJob)
